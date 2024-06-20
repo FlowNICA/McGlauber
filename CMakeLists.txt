@@ -21,7 +21,7 @@ set(INCLUDE_DIRECTORIES
 )
 
 include_directories(${INCLUDE_DIRECTORIES})
-set (CMAKE_CXX_STANDARD 11)
+#---set (CMAKE_CXX_STANDARD 11)
 add_definitions(${ROOT_CXX_FLAGS})
 
 set(CMAKE_BUILD_TYPE Debug)

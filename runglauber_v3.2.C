@@ -718,6 +718,7 @@ void TGlauNucleus::Lookup(const char* name)
   else if (TString(name) == "Xerw")    {fN = 129; fR = 5.36;       fA = 0.59;   fW =  0;       fF = 12; fZ=54; r0=1.00911; r1=-0.000722999; r2=-0.0002663;}
   else if (TString(name) == "Xesrw")   {fN = 129; fR = 5.42;       fA = 0.57;   fW =  0;       fF = 12; fZ=54; r0=1.0096; r1=-0.000874123; r2=-0.000256708;}
   else if (TString(name) == "Xe2arw")  {fN = 129; fR = 5.36;       fA = 0.59;   fW =  0;       fF = 14; fZ=54; fBeta2=0.18; fBeta4=0; r0=1.01246; r1=-0.0024851; r2=-5.72464e-05;} 
+  else if (TString(name) == "Xe124")   {fN = 124; fR =  5.431;     fA = 0.5978; fW =  0;       fF = 8;  fZ=54; fBeta2=0.212; fBeta4=-0.018;} // ALICE parameters from ALICE-PUBLIC-2018-003
   else if (TString(name) == "CsI")     {fN = 130; fR = 6.07;       fA = 0.5;    fW =  0;       fF = 1;  fZ=54;} // fR = 1.2 * pow(A,1./3.)
   else if (TString(name) == "Cs")      {fN = 133; fR = 6.125;      fA = 0.5;    fW =  0;       fF = 1;  fZ=55;} // fR = 1.2 * pow(A,1./3.)
   else if (TString(name) == "W")       {fN = 186; fR = 6.58;       fA = 0.480;  fW =  0;       fF = 1;  fZ=74;}

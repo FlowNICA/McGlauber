@@ -711,6 +711,7 @@ void TGlauNucleus::Lookup(const char* name)
   else if (TString(name) == "CuHN")    {fN = 63;  fR = 4.28;       fA = 0.5;    fW =  0;       fF = 1;  fZ=29;} // from arXiv:0904.4080v1
   else if (TString(name) == "Ag")      {fN = 108; fR = 5.71;       fA = 0.5;    fW =  0;       fF = 1;  fZ=47;} // fR = 1.2 * pow(A,1./3.)
   else if (TString(name) == "I")       {fN = 127; fR = 6.03;       fA = 0.5;    fW =  0;       fF = 1;  fZ=53;} // fR = 1.2 * pow(A,1./3.)
+  else if (TString(name) == "IHS")     {fN = 127; fR = 6.03;       fA = 0.;     fW =  0;       fF = 1;  fZ=53;} // hard sphere approximation
   else if (TString(name) == "Xe")      {fN = 129; fR = 5.36;       fA = 0.59;   fW =  0;       fF = 1;  fZ=54;} // adapted from arXiv:1703.04278
   else if (TString(name) == "Xes")     {fN = 129; fR = 5.42;       fA = 0.57;   fW =  0;       fF = 1;  fZ=54;} // scale from Sb (Antimony, A=122, r=5.32) by 1.019 = (129/122)**0.333
   else if (TString(name) == "Xe2")     {fN = 129; fR = 5.36;       fA = 0.59;   fW =  0;       fF = 8;  fZ=54; fBeta2=0.161; fBeta4=-0.003;} // adapted from arXiv:1703.04278 and Z. Physik (1974) 270: 113
@@ -719,8 +720,11 @@ void TGlauNucleus::Lookup(const char* name)
   else if (TString(name) == "Xesrw")   {fN = 129; fR = 5.42;       fA = 0.57;   fW =  0;       fF = 12; fZ=54; r0=1.0096; r1=-0.000874123; r2=-0.000256708;}
   else if (TString(name) == "Xe2arw")  {fN = 129; fR = 5.36;       fA = 0.59;   fW =  0;       fF = 14; fZ=54; fBeta2=0.18; fBeta4=0; r0=1.01246; r1=-0.0024851; r2=-5.72464e-05;} 
   else if (TString(name) == "Xe124")   {fN = 124; fR =  5.431;     fA = 0.5978; fW =  0;       fF = 8;  fZ=54; fBeta2=0.212; fBeta4=-0.018;} // ALICE parameters from ALICE-PUBLIC-2018-003
+  else if (TString(name) == "Xe124HS") {fN = 124; fR =  5.431;     fA = 0.;     fW =  0;       fF = 1;  fZ=54;} // hard sphere approximation
   else if (TString(name) == "CsI")     {fN = 130; fR = 6.07;       fA = 0.5;    fW =  0;       fF = 1;  fZ=54;} // fR = 1.2 * pow(A,1./3.)
+  else if (TString(name) == "CsIHS")   {fN = 130; fR = 6.07;       fA = 0.;     fW =  0;       fF = 1;  fZ=54;} // hard sphere approximation
   else if (TString(name) == "Cs")      {fN = 133; fR = 6.125;      fA = 0.5;    fW =  0;       fF = 1;  fZ=55;} // fR = 1.2 * pow(A,1./3.)
+  else if (TString(name) == "CsHS")    {fN = 133; fR = 6.125;      fA = 0.;     fW =  0;       fF = 1;  fZ=55;} // hard sphere approximation
   else if (TString(name) == "W")       {fN = 186; fR = 6.58;       fA = 0.480;  fW =  0;       fF = 1;  fZ=74;}
   else if (TString(name) == "Au")      {fN = 197; fR = 6.38;       fA = 0.535;  fW =  0;       fF = 1;  fZ=79;}
   else if (TString(name) == "Au3")     {fN = 197; fR = 6.5541;     fA = 0.523;  fW = 0;        fF = 1;  fZ=79;} // from muonic and HBF calc from Landolt-BÃ¶rnstein

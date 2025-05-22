@@ -1,5 +1,5 @@
 # CMakeLists.txt for FAS package. It creates a library with dictionary and a main program
-cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 4.0 FATAL_ERROR)
 project(Glauber)
 
 # You need to tell CMake where to find the ROOT installation. This can be done

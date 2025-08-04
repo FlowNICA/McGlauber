@@ -339,11 +339,22 @@ class TGlauberMC : public TNamed
         Float_t ThetaA;      //[0,0,16] theta angle nucleus B
         Float_t PhiB;        //[0,0,16] phi angle nucleus B
         Float_t ThetaB;      //[0,0,16] theta angle nucleus B
+        Float_t Ecc1_2;      //[0,0,16] eps1^2
+        Float_t Ecc1_4;      //[0,0,16] eps1^4
+        Float_t Ecc2_2;      //[0,0,16] eps2^2
+        Float_t Ecc2_4;      //[0,0,16] eps2^4
+        Float_t Ecc3_2;      //[0,0,16] eps3^2
+        Float_t Ecc3_4;      //[0,0,16] eps3^4
+        Float_t Ecc4_2;      //[0,0,16] eps4^2
+        Float_t Ecc4_4;      //[0,0,16] eps4^4
+        Float_t Ecc5_2;      //[0,0,16] eps5^2
+        Float_t Ecc5_4;      //[0,0,16] eps5^4
+
         void    Reset()      {Npart=0;Ncoll=0;Nhard=0;B=0;BNN=0;Ncollpp=0;Ncollpn=0;Ncollnn=0;VarX=0;VarY=0;VarXY=0;NpartA=0;NpartB=0;Npart0=0;AreaW=0;
                               Psi1=0;Ecc1=0;Psi2=0;Ecc2=0;Psi3=0;Ecc3=0;Psi4=0;Ecc4=0;Psi5=0;Ecc5=0;
                               AreaA=0;AreaO=0;X0=0;Y0=0;Phi0=0;Length=0;
                               MeanX=0;MeanY=0;MeanX2=0;MeanY2=0;MeanXY=0;MeanXSystem=0;MeanYSystem=0;MeanXA=0;MeanYA=0;MeanXB=0;MeanYB=0;
-                              PhiA=0;ThetaA=0;PhiB=0;ThetaB=0;} // order must match that given in vars below
+                              PhiA=0;ThetaA=0;PhiB=0;ThetaB=0;Ecc1_2=0;Ecc1_4=0;Ecc2_2=0;Ecc2_4=0;Ecc3_2=0;Ecc3_4=0;Ecc4_2=0;Ecc4_4=0;Ecc5_2=0;Ecc5_4=0;} // order must match that given in vars below
         ClassDef(TGlauberMC::Event, 1)
     };
 

@@ -1588,7 +1588,7 @@ Bool_t TGlauberMC::CalcResults(Double_t bgen)
       sinphi[n] /= fEv.Npart;
       rn[n] /= fEv.Npart;
       if (rn[n]>0) {
-	fPsiN[n] = (TMath::ATan2(sinphi[n],cosphi[n]) + TMath::Pi())/n;
+ 	fPsiN[n] = (TMath::ATan2(sinphi[n],cosphi[n]) + TMath::Pi())/n;
 	fEccN[n] = TMath::Sqrt(sinphi[n]*sinphi[n]+cosphi[n]*cosphi[n])/rn[n];
       } else {
 	fPsiN[n] = -1;
@@ -1617,6 +1617,17 @@ Bool_t TGlauberMC::CalcResults(Double_t bgen)
   fEv.Ecc4   = fEccN[4];
   fEv.Psi5   = fPsiN[5];
   fEv.Ecc5   = fEccN[5];
+
+  fEv.Ecc1_2   = pow(fEccN[1], 2);
+  fEv.Ecc1_4   = pow(fEccN[1], 4);
+  fEv.Ecc2_2   = pow(fEccN[2], 2);
+  fEv.Ecc2_4   = pow(fEccN[2], 4);
+  fEv.Ecc3_2   = pow(fEccN[3], 2);
+  fEv.Ecc3_4   = pow(fEccN[3], 4);
+  fEv.Ecc4_2   = pow(fEccN[4], 2);
+  fEv.Ecc4_4   = pow(fEccN[4], 4);
+  fEv.Ecc5_2   = pow(fEccN[5], 2);
+  fEv.Ecc5_4   = pow(fEccN[5], 4);
 
   if (fCalcArea) {
     const Int_t nbins=200;
@@ -1973,6 +1984,8 @@ void TGlauberMC::Run(Int_t nevents, Double_t b)
       vars+=":MeanX:MeanY:MeanX2:MeanY2:MeanXY:MeanXSystem:MeanYSystem:MeanXA:MeanYA:MeanXB:MeanYB";
     if (fDetail>4)
       vars+=":PhiA:ThetaA:PhiB:ThetaB";
+    if (fDetail>5)
+      vars+=":Ecc1_2:Ecc1_4:Ecc2_2:Ecc2_4:Ecc3_2:Ecc3_4:Ecc4_2:Ecc4_4:Ecc5_2:Ecc5_4";
     fNt = new TNtuple(name,title,vars);
     fNt->SetDirectory(0);
     TObjArray *l = fNt->GetListOfBranches();
